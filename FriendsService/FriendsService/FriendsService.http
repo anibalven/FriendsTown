@@ -1,0 +1,6 @@
+﻿@FriendsService_HostAddress = https://localhost:7091
+
+
+GET {{FriendsService_HostAddress}}/friend-events
+
+###
