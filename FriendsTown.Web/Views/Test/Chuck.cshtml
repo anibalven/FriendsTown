@@ -1,0 +1,22 @@
+﻿@{ Layout = null; }
+@model FriendsTown.Web.Models.ChuckViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chuck Norris Jokes</title>
+</head>
+<body>
+    <form>
+        <h4>Get a Joke</h4>
+        <br />
+        <input type="submit" value="Get More" />
+        <br /><br />
+        Text: 
+		<textarea rows="4" cols="50">@Model.value.Trim()</textarea>
+        <br /><br />
+        Date: <input value="@DateTime.Parse(Model.created_at)"  />
+    </form>
+</body>
+</html>
+

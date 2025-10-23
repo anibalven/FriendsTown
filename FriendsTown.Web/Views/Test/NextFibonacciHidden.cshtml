@@ -1,0 +1,26 @@
+﻿@model FriendsTown.Web.Models.FibonacciViewModel
+@{  Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fibonacci Generator</title>
+</head>
+<body>
+        <h3>Fibonacci Generator</h3>
+        <h4>
+        @using (@Html.BeginForm())
+        {
+            <input asp-for="Number1" id="Number1" 
+                name="Number1" type="hidden" />
+            <input asp-for="Number2" id="Number2" 
+                name="Number2" type="hidden" />
+            <input asp-for="Sequence" id="Sequence" 
+                name="Sequence" readonly />
+            <input type="Submit" 
+                value="Calculate a new number" />
+        }
+        </h4>  
+</body>
+</html>
+
