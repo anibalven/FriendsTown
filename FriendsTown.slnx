@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FriendsTown.Domain/FriendsTown.Domain.csproj" Id="056548d3-78b4-459d-b044-dfe879738a10" />
+  <Project Path="FriendsTown.Web/FriendsTown.Web.csproj" />
+</Solution>
