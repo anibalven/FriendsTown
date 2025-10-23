@@ -1,0 +1,28 @@
+﻿@model FriendsTown.Web.Models.FriendApiModel
+@{
+    ViewData["Title"] = "List";
+}
+<h1>List of Friends</h1>
+<form asp-action="List" class="mb-3">
+  <span class="form-label">Text:</span>
+  <input type="text" name="text" class="form-control" />
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+         <th>Id</th>
+         <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if(Model is not null) {
+        @foreach (var item in Model.FriendsList) {
+          <tr>
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+          </tr>
+        }
+      }
+    </tbody>
+</table>
