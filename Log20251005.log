@@ -1,0 +1,148 @@
+2025-10-05 18:56:55.170 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-05 18:56:55.222 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-05 18:56:55.365 +02:00 [INF] User profile is available. Using 'C:\Users\aniba\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-05 18:56:55.536 +02:00 [INF] Now listening on: http://localhost:5198
+2025-10-05 18:56:55.567 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-05 18:56:55.567 +02:00 [INF] Hosting environment: Development
+2025-10-05 18:56:55.567 +02:00 [INF] Content root path: C:\FriendsTown\FriendsTown.Web
+2025-10-05 18:56:56.142 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/ - null null
+2025-10-05 18:56:56.215 +02:00 [INF] Executing endpoint 'FriendsTown.Controllers.HomeController.Index (FriendsTown.Web)'
+2025-10-05 18:56:56.227 +02:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FriendsTown.Controllers.HomeController (FriendsTown.Web).
+2025-10-05 18:56:56.231 +02:00 [INF] Accessing expired session, Key:db48cb5d-6ce7-ea6d-24ac-b361681b1fcd
+2025-10-05 18:56:56.246 +02:00 [INF] Executing RedirectResult, redirecting to /Home/SelectFriend.
+2025-10-05 18:56:56.249 +02:00 [INF] Executed action FriendsTown.Controllers.HomeController.Index (FriendsTown.Web) in 18.9969ms
+2025-10-05 18:56:56.251 +02:00 [INF] Executed endpoint 'FriendsTown.Controllers.HomeController.Index (FriendsTown.Web)'
+2025-10-05 18:56:56.259 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/ - 302 0 null 119.1411ms
+2025-10-05 18:56:56.261 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/Home/SelectFriend - null null
+2025-10-05 18:56:56.264 +02:00 [INF] Executing endpoint 'FriendsTown.Controllers.HomeController.SelectFriend (FriendsTown.Web)'
+2025-10-05 18:56:56.265 +02:00 [INF] Route matched with {action = "SelectFriend", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectFriend() on controller FriendsTown.Controllers.HomeController (FriendsTown.Web).
+2025-10-05 18:56:56.642 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[Email], [f].[EventId], [f].[Name], [f].[Password], [f].[Phone]
+FROM [Friends] AS [f]
+ORDER BY [f].[Name]
+2025-10-05 18:56:56.716 +02:00 [INF] Executing ViewResult, running view SelectFriend.
+2025-10-05 18:56:56.811 +02:00 [INF] Executed ViewResult - view SelectFriend executed in 102.0387ms.
+2025-10-05 18:56:56.812 +02:00 [INF] Executed action FriendsTown.Controllers.HomeController.SelectFriend (FriendsTown.Web) in 546.335ms
+2025-10-05 18:56:56.812 +02:00 [INF] Executed endpoint 'FriendsTown.Controllers.HomeController.SelectFriend (FriendsTown.Web)'
+2025-10-05 18:56:56.814 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/Home/SelectFriend - 200 null text/html; charset=utf-8 552.9319ms
+2025-10-05 18:56:56.821 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/css/site.css - null null
+2025-10-05 18:56:56.821 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-10-05 18:56:56.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - null null
+2025-10-05 18:56:56.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-10-05 18:56:56.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-05 18:56:56.860 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-10-05 18:56:56.920 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 96.6938ms
+2025-10-05 18:56:56.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.946 +02:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\0kzyigtmd1-{0}-b9sayid5wm-b9sayid5wm.gz'
+2025-10-05 18:56:56.946 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.946 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\hpyjbk0bz0-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2025-10-05 18:56:56.946 +02:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\jh9pe1ek67-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2025-10-05 18:56:56.946 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/css/site.css - 200 700 text/css 125.3998ms
+2025-10-05 18:56:56.946 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.946 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\o9xefp5h8q-{0}-493y06b0oq-493y06b0oq.gz'
+2025-10-05 18:56:56.946 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.946 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 86.0305ms
+2025-10-05 18:56:56.946 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.947 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 123.818ms
+2025-10-05 18:56:56.947 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 123.7668ms
+2025-10-05 18:56:56.951 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\pimr9jpy6a-{0}-46ein0sx1k-46ein0sx1k.gz'
+2025-10-05 18:56:56.952 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:56:56.956 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 135.1934ms
+2025-10-05 18:57:03.619 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/Activity - null null
+2025-10-05 18:57:03.621 +02:00 [INF] Executing endpoint 'FriendsTown.Web.Controllers.ActivityController.Index (FriendsTown.Web)'
+2025-10-05 18:57:03.626 +02:00 [INF] Route matched with {action = "Index", controller = "Activity"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FriendsTown.Web.Controllers.ActivityController (FriendsTown.Web).
+2025-10-05 18:57:03.628 +02:00 [INF] Starting call to Activity/Index method
+2025-10-05 18:57:03.630 +02:00 [INF] Call to Activity/Index method completed
+2025-10-05 18:57:03.631 +02:00 [INF] Executing ViewResult, running view Index.
+2025-10-05 18:57:03.652 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Description], [a].[Name]
+FROM [Activities] AS [a]
+ORDER BY [a].[Name]
+2025-10-05 18:57:03.670 +02:00 [INF] Executed ViewResult - view Index executed in 39.2001ms.
+2025-10-05 18:57:03.670 +02:00 [INF] Executed action FriendsTown.Web.Controllers.ActivityController.Index (FriendsTown.Web) in 43.7151ms
+2025-10-05 18:57:03.670 +02:00 [INF] Executed endpoint 'FriendsTown.Web.Controllers.ActivityController.Index (FriendsTown.Web)'
+2025-10-05 18:57:03.670 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/Activity - 200 null text/html; charset=utf-8 50.7727ms
+2025-10-05 18:57:03.680 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-10-05 18:57:03.680 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/css/site.css - null null
+2025-10-05 18:57:03.681 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-10-05 18:57:03.680 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - null null
+2025-10-05 18:57:03.681 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-10-05 18:57:03.681 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-05 18:57:03.682 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 0.2257ms
+2025-10-05 18:57:03.682 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.682 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.682 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.684 +02:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\0kzyigtmd1-{0}-b9sayid5wm-b9sayid5wm.gz'
+2025-10-05 18:57:03.684 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.684 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/css/site.css - 200 700 text/css 3.6081ms
+2025-10-05 18:57:03.684 +02:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\jh9pe1ek67-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2025-10-05 18:57:03.684 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.684 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 3.1174ms
+2025-10-05 18:57:03.686 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\pimr9jpy6a-{0}-46ein0sx1k-46ein0sx1k.gz'
+2025-10-05 18:57:03.686 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.686 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 5.6501ms
+2025-10-05 18:57:03.690 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.692 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\hpyjbk0bz0-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2025-10-05 18:57:03.692 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.692 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 11.9278ms
+2025-10-05 18:57:03.719 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.720 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\o9xefp5h8q-{0}-493y06b0oq-493y06b0oq.gz'
+2025-10-05 18:57:03.720 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:03.720 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 39.9222ms
+2025-10-05 18:57:05.085 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/Activity/Details/16709752-7baa-4b0c-be26-60e7a28a7444 - null null
+2025-10-05 18:57:05.086 +02:00 [INF] Executing endpoint 'FriendsTown.Web.Controllers.ActivityController.Details (FriendsTown.Web)'
+2025-10-05 18:57:05.091 +02:00 [INF] Route matched with {action = "Details", controller = "Activity"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Details(System.Guid) on controller FriendsTown.Web.Controllers.ActivityController (FriendsTown.Web).
+2025-10-05 18:57:05.097 +02:00 [INF] Starting Call to Activity/Details method with ActivityId .16709752-7baa-4b0c-be26-60e7a28a7444
+2025-10-05 18:57:05.100 +02:00 [INF] Call to Activity/Details  completed. Name: street market2
+2025-10-05 18:57:05.101 +02:00 [INF] Executing ViewResult, running view Details.
+2025-10-05 18:57:05.113 +02:00 [INF] Executed ViewResult - view Details executed in 13.2401ms.
+2025-10-05 18:57:05.114 +02:00 [INF] Executed action FriendsTown.Web.Controllers.ActivityController.Details (FriendsTown.Web) in 22.4491ms
+2025-10-05 18:57:05.114 +02:00 [INF] Executed endpoint 'FriendsTown.Web.Controllers.ActivityController.Details (FriendsTown.Web)'
+2025-10-05 18:57:05.114 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/Activity/Details/16709752-7baa-4b0c-be26-60e7a28a7444 - 200 null text/html; charset=utf-8 28.9686ms
+2025-10-05 18:57:05.127 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-10-05 18:57:05.128 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.130 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\pimr9jpy6a-{0}-46ein0sx1k-46ein0sx1k.gz'
+2025-10-05 18:57:05.130 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.131 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 3.0602ms
+2025-10-05 18:57:05.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/css/site.css - null null
+2025-10-05 18:57:05.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - null null
+2025-10-05 18:57:05.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-10-05 18:57:05.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-10-05 18:57:05.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-05 18:57:05.133 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.133 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.133 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 0.2154ms
+2025-10-05 18:57:05.133 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.133 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.134 +02:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\jh9pe1ek67-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2025-10-05 18:57:05.134 +02:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\0kzyigtmd1-{0}-b9sayid5wm-b9sayid5wm.gz'
+2025-10-05 18:57:05.134 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.134 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.134 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/css/site.css - 200 700 text/css 2.1303ms
+2025-10-05 18:57:05.134 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 1.8375ms
+2025-10-05 18:57:05.134 +02:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\hpyjbk0bz0-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2025-10-05 18:57:05.134 +02:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\FriendsTown\FriendsTown.Web\obj\Debug\net10.0\compressed\o9xefp5h8q-{0}-493y06b0oq-493y06b0oq.gz'
+2025-10-05 18:57:05.134 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.135 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-10-05 18:57:05.135 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 2.3816ms
+2025-10-05 18:57:05.135 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5198/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 2.2627ms
