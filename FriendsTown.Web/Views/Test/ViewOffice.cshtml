@@ -1,0 +1,30 @@
+﻿<script src="~/lib/jquery/dist/jquery.js"></script>
+<h4>Office Information</h4>
+<br />
+<div>
+	<div class="row text-left">
+		<span class="col-2">Code: </span>
+		<span class="col-10">
+			<input type="text" id="Code" />
+		</span>
+	</div>
+	<div class="row text-left">
+		<span class="col-2">Name: </span>
+		<span class="col-10">
+			<input type="text" id="Name" />
+		</span>
+	</div>
+	<div class="row text-left">
+		<span class="col-2">
+			<input type="submit" value="Submit" onclick="GetData()" />
+		</span>
+	</div>
+</div>
+<script>
+	function GetData() {
+		$.get("http://localhost:5198/api/offices/" + $("#Code").val(), 
+			function (data) {
+				$("#Name").val(data.name);
+			});
+	}
+</script>
