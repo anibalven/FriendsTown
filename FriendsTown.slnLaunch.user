@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "FriendsTown.WebApi\\FriendsTown.WebApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "FriendsTown.Web\\FriendsTown.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

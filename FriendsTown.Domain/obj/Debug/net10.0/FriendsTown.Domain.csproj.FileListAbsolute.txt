@@ -1,0 +1,11 @@
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\bin\Debug\net10.0\FriendsTown.Domain.deps.json
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\bin\Debug\net10.0\FriendsTown.Domain.dll
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\bin\Debug\net10.0\FriendsTown.Domain.pdb
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.AssemblyInfoInputs.cache
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.AssemblyInfo.cs
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.csproj.CoreCompileInputs.cache
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.dll
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\refint\FriendsTown.Domain.dll
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\FriendsTown.Domain.pdb
+C:\FriendsTown 10\Lesson24\FriendsTown.Domain\obj\Debug\net10.0\ref\FriendsTown.Domain.dll

@@ -1,0 +1,50 @@
+﻿<h4>Event Details</h4>
+<br />
+<div id="appEvent" class="col-md-4">
+    <div class="form-group">
+        <label for="activity" class="control-label">Activity: </label>
+        <input id="activity" v-model="eventData.activity" readonly 
+               class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="responsable">Organizer:</label>
+        <input id="organizer" v-model="eventData.organizer" readonly 
+               class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="ciudad">City: </label>
+        <input v-model="eventData.city" id="city" readonly 
+               class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="street" class="control-label">Street: </label>
+        <input v-model="eventData.street" id="street" readonly 
+               class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="number" class="control-label">Number: </label>
+        <input v-model="eventData.number" id="number" readonly 
+               class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="reference" class="control-label">Reference: </label>
+        <input v-model="eventData.reference" id="reference" readonly 
+               class="form-control" />
+    </div>
+</div>
+<div class="form-group">
+    <a asp-action="Index">Back to the List</a>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="https://unpkg.com/vue@3.0.3/dist/vue.global.js"></script>
+<script>
+    const appEvent = Vue.createApp({
+        data() {
+            return {
+                eventData : @Html.Raw(@ViewBag.Data)
+            }
+        }
+    });
+    appEvent.mount('#appEvent');
+</script>
+
