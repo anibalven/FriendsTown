@@ -1,0 +1,25 @@
+﻿@{     Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fibonacci Generator</title>
+</head>
+<body>
+    <h3>Fibonacci Generator</h3>
+    <h4>
+        Last numbers:  @ViewBag.Number1, @ViewBag.Number2
+    </h4>
+    <h4>
+        New calculated number: @ViewBag.Next
+    </h4>
+    <h4>
+        @Html.ActionLink(" Calculate a new number!", 
+            "NextFibonacci", "Test", 
+            new { number1 = @ViewBag.Number2, 
+                  number2 = @ViewBag.Next })
+
+        @Html.Hidden("ProductId", "125")
+    </h4>
+</body>
+</html>
